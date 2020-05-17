@@ -12,7 +12,7 @@ Features
 
 * Provides an recent anime schedule
 * Double-click feature redirect to anime url
-* Auto-fills form fields whenever possible
+* Switch image on selection
 
 Authors
 =======
