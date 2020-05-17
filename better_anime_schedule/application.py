@@ -14,7 +14,7 @@ class Application(tk.Tk):
         super().__init__(*args, **kwargs)
         self.today = date.today()
         self.title("Anime Schedule")
-        self.geometry("900x400")
+        self.geometry("900x390")
         ttk.Label(self,
                   text="Anime Schedule {}".format(self.today.strftime("%d, %B %Y")),
                   font=("TkDefaultFont", 18, "bold"))\
@@ -54,6 +54,13 @@ class Application(tk.Tk):
         self.url_redirect = {}
         for index, link in self.urlsource.items(): # mark thread
             self.url_redirect[index] = link
+
+        # Status bar
+        self.status = tk.Label(self, text="Press enter or double-click on selection will redirect your webbrowser"
+                                " to the anime url", font=("Helvetica", 12),
+                                relief='sunken', anchor="center")
+        self.status.grid(row=2, column=0, columnspan=2,
+                         sticky="nsew")
 
 
     def change_img(self, *args):
